@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-import sys
+import sys #me sirve para importar funcionalidad de un codigo externo
 
 
 def plus(op1, op2):
@@ -13,7 +13,7 @@ def minus(op1, op2):
     """ Function to substract the operands """
     return op1 - op2
 
-if __name__ == "__main__":
+if __name__ == "__main__": #el codigo principal se ejecuta debajo de esta linea
     try:
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
