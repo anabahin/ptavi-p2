@@ -3,10 +3,12 @@
 
 import sys
 import calcoohija
-
-fichero = open('fichero.cvs', 'r')
-
-lineas = fichero.readlines()
+try:
+    fichero = sys.argv[1]
+except:
+    sys.exit("fichero not found")
+abrir = open('fichero.cvs', 'r')
+lineas = abrir.readlines()
 
 if __name__ == "__main__":
     
