@@ -7,7 +7,7 @@ try:
     fichero = sys.argv[1]
 except:
     sys.exit("fichero not found")
-abrir = open('fichero.cvs', 'r')
+abrir = open('fichero.csv', 'r')
 lineas = abrir.readlines()
 
 if __name__ == "__main__":

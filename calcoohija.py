@@ -9,8 +9,10 @@ class calculadorahija(calcoo.Calculador):
     def multiply(self, n1, n2):
         return (n1 * n2)
     def division(self, n1, n2):
-        return(n1/n2)
-        
+        try:
+            return(n1/n2)
+        except ZeroDivisionError:
+            sys.exit("Division by zero is not allowed.")
 if __name__ == "__main__":
     try:
         operando1 = int(sys.argv[1])
@@ -26,10 +28,7 @@ if __name__ == "__main__":
         resultado = calculadora.minus(operando1, operando2)    
     elif sys.argv[2] == "multiplicar":
         resultado = calculadora.multiply(operando1, operando2)
-    elif sys.argv[2] == "division":
-        if sys.argv[3]=="0":
-            sys.exit("Division by zero is not allowed.")
-        else: 
+    elif sys.argv[2] == "division": 
             resultado = calculadora.division(operando1,operando2)
     else:
         sys.exit("Error:solo se puede sumar, restar, multiplicar y dividir")
